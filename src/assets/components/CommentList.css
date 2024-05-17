@@ -1,0 +1,14 @@
+.commentlist {
+  background-color: #f9f9f9;
+}
+
+.commentlist label {
+  background-color: #f9f9f9;
+  color: #666;
+  margin-right: 10px;
+}
+
+.commentlist input {
+  color: #666;
+  margin-right: 10px;
+}

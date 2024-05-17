@@ -1,0 +1,26 @@
+.createblog-content {
+  height: 258px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.createblog-content-label {
+  background-color: #f9f9f9;
+  color: #666;
+  margin-right: 10px;
+}
+
+.createblog-content-input {
+  background-color: #f9f9f9;
+  color: #666;
+  margin-right: 10px;
+}
+
+.createblog-content-form {
+  background-color: #f9f9f9;
+  color: #666;
+  margin-right: 10px;
+}

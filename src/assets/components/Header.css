@@ -1,0 +1,52 @@
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+}
+
+.logo {
+  color: tomato;
+}
+
+.link {
+  text-decoration: none;
+  margin-right: 30px;
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+.link:hover {
+  color: tomato;
+}
+
+.link-menu {
+  display: flex;
+}
+
+.button-header {
+  border: none;
+  color: #747474;
+  font-weight: 500;
+  padding: 1vw 2.3vw;
+  background-color: white;
+  font-size: 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.button-header:hover {
+  color: tomato;
+}
+
+.username-header {
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+.button-component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
