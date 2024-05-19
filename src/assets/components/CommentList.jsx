@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { CommentContext } from "../context/CommentContext";
 import useInput from "../hooks/useInput";
-import { UserContext } from "../context/UserContext";
 import "./CommentList.css";
+import { AuthContext } from "../context/AuthContext";
 
 const CommentList = (props) => {
   const { comments, setComments } = useContext(CommentContext);
-  const { userName } = useContext(UserContext);
+  const { currentUser } = useContext(AuthContext);
   const textInput = useInput();
   const filteredComments = comments.filter((comment) => {
     return comment.postId === props.id;
@@ -26,7 +26,7 @@ const CommentList = (props) => {
         id: maxId + 1,
         postId: props.id,
         text: textInput.value,
-        author: userName,
+        author: currentUser.email,
       },
     ]);
     textInput.reset();

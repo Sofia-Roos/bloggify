@@ -1,29 +1,44 @@
 import React from "react";
 import Header from "./assets/components/Header";
-import { UserProvider } from "./assets/context/UserContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Landingpage from "./assets/pages/Landingpage";
+import BlogPage from "./assets/pages/BlogPage";
 import { BlogProvider } from "./assets/context/BlogContext";
 import { CommentProvider } from "./assets/context/CommentContext";
 import AboutPage from "./assets/pages/AboutPage";
 import MyPage from "./assets/pages/MyPage";
+import LoginComponent from "./assets/components/LoginComponent";
+import RegisterComponent from "./assets/components/RegisterComponent";
+import PrivateRoutes from "./assets/components/PrivateRoutes";
+import PageLayout from "./assets/components/PageLayout";
 
 const App = () => {
   return (
-    <UserProvider>
-      <BlogProvider>
-        <CommentProvider>
-          <BrowserRouter>
-            <Header />
-            <Routes>
-              <Route path="/" element={<Landingpage />} />
+    <BlogProvider>
+      <CommentProvider>
+        <BrowserRouter>
+          <Header />
+
+          <Routes>
+            <Route element={<PrivateRoutes />}>
+              <Route path="/blogs" element={<BlogPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/mypage" element={<MyPage />} />
-            </Routes>
-          </BrowserRouter>
-        </CommentProvider>
-      </BlogProvider>
-    </UserProvider>
+            </Route>
+
+            <Route path="/login" element={<LoginComponent />} />
+            <Route path="/register" element={<RegisterComponent />} />
+            <Route
+              path="/"
+              element={
+                <PageLayout>
+                  <h1>I am a public page</h1>
+                </PageLayout>
+              }
+            />
+          </Routes>
+        </BrowserRouter>
+      </CommentProvider>
+    </BlogProvider>
   );
 };
 

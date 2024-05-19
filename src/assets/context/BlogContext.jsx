@@ -8,19 +8,19 @@ export const BlogProvider = (props) => {
       id: 1,
       title: "Post 1",
       text: "Lorem ipsum hej på dig blablablabla",
-      author: "John Doe",
+      author: "john@doe.se",
     },
     {
       id: 2,
       title: "Post 2",
       text: "Lorem ipsum hej på dig blablablabla",
-      author: "Jane Doe",
+      author: "jane@doe.se",
     },
     {
       id: 3,
       title: "Post 3",
       text: "Lorem ipsum hej på dig blablablabla",
-      author: "Silly Doe",
+      author: "silly@doe.se",
     },
   ]);
 

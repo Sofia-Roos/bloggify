@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react";
 import { BlogContext } from "../context/BlogContext";
-import { UserContext } from "../context/UserContext";
 import CommentList from "./CommentList";
 import "./ReadBlogs.css";
+import { AuthContext } from "../context/AuthContext";
 
 const ReadBlogs = () => {
   const { blogs, setBlogs } = useContext(BlogContext);
-  const { userName } = useContext(UserContext);
+  const { currentUser } = useContext(AuthContext);
   const [editingBlog, setEditingBlog] = useState("");
   const [newTitle, setNewTitle] = useState("");
   const [newText, setNewText] = useState("");
@@ -57,7 +57,7 @@ const ReadBlogs = () => {
 
                 <CommentList id={blog.id} />
 
-                {userName === blog.author ? (
+                {currentUser.email === blog.author ? (
                   <>
                     {" "}
                     <button onClick={() => handleEdit(blog)}>Edit</button>

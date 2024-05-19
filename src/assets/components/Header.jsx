@@ -1,15 +1,23 @@
 import { useContext } from "react";
 import "./Header.css";
-import { UserContext } from "../context/UserContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
+import { signOutUser } from "../firebase/authFunctions";
 
 const Header = () => {
-  const { userName, isLoggedIn, login, logout } = useContext(UserContext);
+  const { currentUser, userLoggedIn } = useContext(AuthContext);
+
+  let navigate = useNavigate();
+  const navigateToLogin = () => {
+    let path = `login`;
+    navigate(path);
+  };
+
   return (
     <div className="header-container">
       <h1 className="logo">BLOGGIFY</h1>
       <div className="link-menu">
-        <Link className="link" to="/">
+        <Link className="link" to="/blogs">
           Blogs
         </Link>
         <Link className="link" to="/about">
@@ -22,15 +30,15 @@ const Header = () => {
 
       <div className="button-container">
         <div className="button-component">
-          {isLoggedIn ? (
+          {userLoggedIn ? (
             <>
-              <p className="username-header">{userName}</p>
-              <button className="button-header" onClick={logout}>
+              <p className="username-header">{currentUser.email}</p>
+              <button className="button-header" onClick={signOutUser}>
                 Log out
               </button>
             </>
           ) : (
-            <button className="button-header" onClick={login}>
+            <button className="button-header" onClick={navigateToLogin}>
               Log in
             </button>
           )}

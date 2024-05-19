@@ -1,5 +1,5 @@
 .createblog-content {
-  height: 258px;
+  height: 432px;
   border: 1px solid #ddd;
   padding: 20px;
   margin-bottom: 20px;
@@ -9,18 +9,44 @@
 
 .createblog-content-label {
   background-color: #f9f9f9;
-  color: #666;
-  margin-right: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
 }
 
-.createblog-content-input {
-  background-color: #f9f9f9;
+.createblog-content-input,
+.createblog-content-textarea {
   color: #666;
   margin-right: 10px;
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.createblog-content-textarea {
+  height: 250px;
 }
 
 .createblog-content-form {
   background-color: #f9f9f9;
   color: #666;
   margin-right: 10px;
+}
+
+.createblog-content-button {
+  background-color: #063669;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.createblog-content-button:hover {
+  background-color: #09519e;
 }

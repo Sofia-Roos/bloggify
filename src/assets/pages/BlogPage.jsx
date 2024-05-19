@@ -4,7 +4,7 @@ import ReadBlogs from "../components/ReadBlogs";
 
 const Landingpage = () => {
   return (
-    <div className="landingpage-container">
+    <div>
       <ReadBlogs />
       <CreateBlog />
     </div>
