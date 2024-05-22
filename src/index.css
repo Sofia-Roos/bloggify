@@ -8,14 +8,3 @@
   background-color: #14213d;
   color: white;
 }
-
-.landingpage-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  margin: auto;
-  gap: 30px;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
-  margin-top: 100px;
-}

@@ -1,0 +1,45 @@
+.landingpage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.landingpage-h1 {
+  color: #fcfcfc;
+  font-size: 48px;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.landingpage-herotext-h2 {
+  color: tomato;
+  font-size: 26px;
+  font-style: italic;
+  margin-bottom: 34px;
+  font-weight: 200;
+}
+
+.landingpage-herotext {
+  color: #fcfcfc;
+  font-size: 18px;
+  font-weight: 200;
+  text-align: center;
+}
+
+.heroimg {
+  width: 300px;
+  border-radius: 50px;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.p-tomato {
+  color: tomato;
+}

@@ -29,27 +29,28 @@ const CreateBlog = () => {
     textInput.reset();
   };
   return (
-    <div className="createblog-content">
-      <form className="createblog-content-form" onSubmit={handleSubmit}>
-        <h1 className="createblog-content-label">Title</h1>
-        <input
-          className="createblog-content-input"
-          type="text"
-          placeholder="Enter your title here..."
-          {...titleInput}
-        />
-        <h1 className="createblog-content-label">Message</h1>
-        <input
-          className="createblog-content-textarea"
-          type="text-area"
-          placeholder="Enter your message here..."
-          {...textInput}
-        />
+    <div>
+      <div className="createblog-content">
+        <form className="createblog-content-form" onSubmit={handleSubmit}>
+          <h1 className="createblog-content-label">Title</h1>
+          <input
+            className="createblog-content-input"
+            type="text"
+            placeholder="Enter your title here..."
+            {...titleInput}
+          />
+          <h1 className="createblog-content-label">Message</h1>
+          <textarea
+            className="createblog-content-textarea"
+            placeholder="Enter your message here..."
+            {...textInput}
+          />
 
-        <button className="createblog-content-button" type="submit">
-          Submit
-        </button>
-      </form>
+          <button className="createblog-content-button" type="submit">
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

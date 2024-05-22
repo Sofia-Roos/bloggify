@@ -1,4 +1,53 @@
-/* Container for each blog post */
+.editblog-content {
+  height: 432px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.editblog-content-label {
+  background-color: #f9f9f9;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.editblog-content-input,
+.editblog-content-textarea {
+  color: #666;
+  margin-right: 10px;
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  text-align: left;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+.editblog-content-textarea {
+  height: 250px;
+}
+
+.editblog-content-button {
+  background-color: #063669;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.editblog-content-button:hover {
+  background-color: #09519e;
+}
 
 .readblogs-content {
   border: 1px solid #ddd;
@@ -8,7 +57,6 @@
   background-color: #f9f9f9;
 }
 
-/* Blog post title */
 .readblogs-content h2 {
   font-size: 24px;
   margin-bottom: 10px;
@@ -16,7 +64,6 @@
   background-color: #f9f9f9;
 }
 
-/* Blog post text */
 .readblogs-content p {
   font-size: 16px;
   color: #666;
@@ -24,14 +71,12 @@
   background-color: #f9f9f9;
 }
 
-/* Blog post author */
 .readblogs-content p:last-child {
   font-style: italic;
   color: #999;
   background-color: #f9f9f9;
 }
 
-/* Buttons */
 .readblogs-content button {
   background-color: #063669;
   color: white;
@@ -47,7 +92,6 @@
   background-color: #09519e;
 }
 
-/* Input fields for editing */
 .readblogs-content input,
 .readblogs-content textarea {
   width: 50%;

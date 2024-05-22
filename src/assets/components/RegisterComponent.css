@@ -1,0 +1,54 @@
+.register-container {
+  margin-top: 10rem;
+  width: 100%;
+  display: flex;
+  align-self: center;
+  place-content: center;
+  place-items: center;
+}
+
+.register-h2 {
+  color: tomato;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.register-label {
+  color: #f9f9f9;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.register-input {
+  color: #666;
+  margin-right: 10px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.button-register {
+  border: none;
+  color: #747474;
+  font-weight: 500;
+  padding: 10px 20px;
+  background-color: white;
+  font-size: 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-left: 120px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.button-login:hover {
+  color: tomato;
+}
+
+.register-text {
+  margin-left: 40px;
+}

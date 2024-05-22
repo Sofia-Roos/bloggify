@@ -24,6 +24,9 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #f9f9f9;
+  text-align: left;
+  vertical-align: top;
+  box-sizing: border-box;
 }
 
 .createblog-content-textarea {

@@ -15,7 +15,9 @@ const Header = () => {
 
   return (
     <div className="header-container">
-      <h1 className="logo">BLOGGIFY</h1>
+      <Link className="logo" to="/">
+        BLOGGIFY
+      </Link>
       <div className="link-menu">
         <Link className="link" to="/blogs">
           Blogs

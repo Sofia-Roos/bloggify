@@ -1,0 +1,25 @@
+.blogpage-container {
+  display: flex;
+  gap: 30px;
+  margin-top: 100px;
+}
+
+.blogpage-createblog {
+  width: 50%;
+  margin-left: 2.5%;
+}
+
+.blogpage-readblogs {
+  width: 50%;
+  margin-right: 2.5%;
+}
+
+.blogpage-readblogs-h1 {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.blogpage-createblog-h1 {
+  margin-bottom: 8px;
+  font-weight: 500;
+}

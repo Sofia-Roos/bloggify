@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Navigate, Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { signInUser } from "../firebase/authFunctions";
+import "./LoginComponent.css";
 
 const LoginComponent = () => {
   const { userLoggedIn } = useContext(AuthContext);
@@ -24,20 +25,18 @@ const LoginComponent = () => {
   };
 
   return (
-    <div>
+    <div className="login-container">
       {userLoggedIn && <Navigate to={"/"} replace={true} />}
-
       <main>
         <div>
           <div>
-            <div>
-              <h3>Log in</h3>
-            </div>
+            <h2 className="login-h2">Log in</h2>
           </div>
           <form onSubmit={onSubmit}>
             <div>
-              <label>Email</label>
+              <label className="login-label">Email</label>
               <input
+                className="login-input"
                 type="email"
                 autoComplete="email"
                 required
@@ -49,8 +48,9 @@ const LoginComponent = () => {
             </div>
 
             <div>
-              <label>Password</label>
+              <label className="login-label">Password</label>
               <input
+                className="login-input"
                 type="password"
                 autoComplete="current-password"
                 required
@@ -64,19 +64,15 @@ const LoginComponent = () => {
             {errorMessage && <span>{errorMessage}</span>}
 
             <button
+              className="button-login"
               type="submit"
               disabled={isSigningIn}
-              className={`w-full px-4 py-2 text-white font-medium rounded-lg ${
-                isSigningIn
-                  ? "bg-gray-300 cursor-not-allowed"
-                  : "bg-indigo-600 hover:bg-indigo-700 hover:shadow-xl transition duration-300"
-              }`}
             >
               {isSigningIn ? "Signing In..." : "Sign In"}
             </button>
           </form>
           <p>
-            Don't have an account? <Link to={"/register"}>Sign up</Link>
+            Don't have an account? <Link to={"/register"}>Sign up here!</Link>
           </p>
         </div>
       </main>

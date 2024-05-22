@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Navigate, Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { createUser } from "../firebase/authFunctions";
+import "./RegisterComponent.css";
 
 const RegisterComponent = () => {
   const { userLoggedIn } = useContext(AuthContext);
@@ -25,20 +26,21 @@ const RegisterComponent = () => {
   };
 
   return (
-    <>
+    <div className="register-container">
       {userLoggedIn && <Navigate to={"/"} replace={true} />}
 
       <main>
         <div>
           <div>
             <div>
-              <h3>Create a new account</h3>
+              <h2 className="register-h2">Create a new account</h2>
             </div>
           </div>
           <form onSubmit={onSubmit}>
             <div>
-              <label>Email</label>
+              <label className="register-label">Email</label>
               <input
+                className="register-input"
                 type="email"
                 autoComplete="email"
                 required
@@ -50,8 +52,9 @@ const RegisterComponent = () => {
             </div>
 
             <div>
-              <label>Password</label>
+              <label className="register-label">Password</label>
               <input
+                className="register-input"
                 disabled={isRegistering}
                 type="password"
                 autoComplete="new-password"
@@ -64,8 +67,9 @@ const RegisterComponent = () => {
             </div>
 
             <div>
-              <label>Confirm Password</label>
+              <label className="register-label">Confirm Password</label>
               <input
+                className="register-input"
                 disabled={isRegistering}
                 type="password"
                 autoComplete="off"
@@ -79,17 +83,21 @@ const RegisterComponent = () => {
 
             {errorMessage && <span>{errorMessage}</span>}
 
-            <button type="submit" disabled={isRegistering}>
+            <button
+              className="button-register"
+              type="submit"
+              disabled={isRegistering}
+            >
               {isRegistering ? "Signing Up..." : "Sign Up"}
             </button>
-            <div>
+            <div className="register-text">
               Already have an account? {"   "}
               <Link to={"/login"}>Continue</Link>
             </div>
           </form>
         </div>
       </main>
-    </>
+    </div>
   );
 };
 
